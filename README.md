@@ -73,4 +73,25 @@ So lets say you need another color for your skeleton element, or you want to cha
       100% { background-position: 112vw}
       
     }
-    
+
+   ### Image Skeleton element
+You can add the below custom CSS to your main CSS file to enable images in `div` elements to display as round skeleton elements:
+#### HTML Template
+ `<div  [placeholderIf]="!(salesOrder)"><img  src="/assets/logo.png"  /></div>`
+ #### CSS 
+
+     div.skeleton{
+        padding:0;
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        height:20%;
+        width:20%;
+        img{
+            opacity: 0;
+        }
+        
+    }
