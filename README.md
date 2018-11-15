@@ -30,7 +30,7 @@ Lets say you have an observable that populates an object of type `salesOrderMode
 ### HTML Template
 Lets say we have a `mat-card` that we populate with data from our `salesOrder` object.
 We would then reference the directive, and assign it the condition `!(salesOrder)` so that it remains true until the element has a value.
-> Empty elements don't display, that's why we need to add a `&nbsp;` to the elements. This is done conditionally of course.
+> Empty elements don't display, thats why we need to add a `&nbsp;` to the elements. This is done conditionally of course.
 > If the `salesOrder` object is undefined add `&nbsp;` , otherwise add a value 
 > `{{salesOrder!=undefined ? 'Item' :'&nbsp;'}}`
 > If the `salesOrder.item` property is undefined, add a `&nbsp;` , Otherwise add the value of `salesOrder.item`
@@ -43,7 +43,7 @@ We would then reference the directive, and assign it the condition `!(salesOrder
 		    <h2  [placeholderIf]="!(salesOrder)">{{salesOrder!=undefined ? 'Quantity' : '&nbsp;'}}</h2>
 		    <h1  [placeholderIf]="!(salesOrder)"> {{salesOrder?.quantity||'&nbsp;'}}</h1>
 		    <h2  [placeholderIf]="!(salesOrder)">{{salesOrder!=undefined ? 'Price' : '&nbsp;'}}</h2>
-		    <h1  [placeholderIf]="!(salesOrder)"> {{salesOrder?.price |currency:'USD' ||'&nbsp;'}}</h1>
+		    <h1  [placeholderIf]="!(salesOrder)"> {{salesOrder?.price |currency:'ZAR' ||'&nbsp;'}}</h1>
 	    </mat-card-content>
 	    <mat-card-actions>
 		    <button  [placeholderIf]="!(salesOrder)"  mat-flat-button  mat-button  [color]="'accent'">Ok</button>
